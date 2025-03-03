@@ -12,4 +12,9 @@ myTest.test('Testing operations', async (t) => {
         const result = operations.add(2,b3);
         assert.equal(result, expected);
     });
+    t.test('test multiplication', (t) => {
+        const expected = 6;
+        const result = operations.multiply(a,b);
+        assert.equal(result, expected);
+    });
 });
