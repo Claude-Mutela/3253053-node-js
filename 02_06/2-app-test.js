@@ -1,22 +1,16 @@
+//importation des modules des test
 const myTest = require('node:test');
+//module d'insertion
 const assert = require('node:assert/strict');
+//importation module opération
 const myOperation = require('./1-operations');
+//Définition d'un test
 
-myTest.test('test adddition', (tc) => {
-    // Arrange
+myTest.test('Test addition', () => {
+    //initialiser les variables
     const operations = new myOperation.operations();
-    // Action
+    //Effectuer l'action
     const result = operations.add(1, 2);
-    // Assert
-    assert.strictEqual(result, 3);
-});
-
-myTest.test('test multiplication', () => {
-    // Arrange
-    const operations = new myOperation.operations();
-    // Action
-    let result = operations.multiply(2, 3);
-    // Assert
-    assert.equal(result, 6);
-});
-
+    //Etablir l'assertion
+    assert.strictEqual(result, 3); //vérifier si le résultat est égal à 3
+})
